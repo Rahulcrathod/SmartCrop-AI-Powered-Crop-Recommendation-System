@@ -1,0 +1,788 @@
+{
+  "crop_classifier": {
+    "model_type": "RandomForestClassifier",
+    "n_estimators": 100,
+    "features": [
+      "N",
+      "P",
+      "K",
+      "temperature",
+      "humidity",
+      "ph",
+      "rainfall"
+    ],
+    "classes": [
+      "apple",
+      "banana",
+      "blackgram",
+      "chickpea",
+      "coconut",
+      "coffee",
+      "cotton",
+      "grapes",
+      "jute",
+      "kidneybeans",
+      "lentil",
+      "maize",
+      "mango",
+      "mothbeans",
+      "mungbean",
+      "muskmelon",
+      "orange",
+      "papaya",
+      "pigeonpeas",
+      "pomegranate",
+      "rice",
+      "watermelon"
+    ],
+    "train_accuracy": 1.0,
+    "test_accuracy": 0.9735,
+    "feature_importance": {
+      "N": 0.1209,
+      "P": 0.1707,
+      "K": 0.1706,
+      "temperature": 0.0767,
+      "humidity": 0.2026,
+      "ph": 0.0486,
+      "rainfall": 0.2098
+    },
+    "trained_samples": 1320,
+    "version": "v1.2.0"
+  },
+  "yield_regressor": {
+    "model_type": "RandomForestRegressor",
+    "n_estimators": 120,
+    "features": [
+      "crop_id",
+      "area_acres",
+      "N",
+      "P",
+      "K",
+      "rainfall",
+      "temperature",
+      "irrigation_factor"
+    ],
+    "r2_score": 0.9742,
+    "rmse": 1.5343,
+    "feature_importance": {
+      "crop_id": 0.7567,
+      "area_acres": 0.0042,
+      "N": 0.1371,
+      "P": 0.0206,
+      "K": 0.0114,
+      "rainfall": 0.0302,
+      "temperature": 0.0036,
+      "irrigation_factor": 0.0362
+    },
+    "crop_index_map": {
+      "rice": 0,
+      "maize": 1,
+      "chickpea": 2,
+      "kidneybeans": 3,
+      "pigeonpeas": 4,
+      "mothbeans": 5,
+      "mungbean": 6,
+      "blackgram": 7,
+      "lentil": 8,
+      "pomegranate": 9,
+      "banana": 10,
+      "mango": 11,
+      "grapes": 12,
+      "watermelon": 13,
+      "muskmelon": 14,
+      "apple": 15,
+      "orange": 16,
+      "papaya": 17,
+      "coconut": 18,
+      "cotton": 19,
+      "jute": 20,
+      "coffee": 21
+    },
+    "trained_samples": 1320,
+    "version": "v1.1.0"
+  },
+  "crop_profiles": {
+    "rice": {
+      "N": [
+        60,
+        100
+      ],
+      "P": [
+        35,
+        60
+      ],
+      "K": [
+        35,
+        45
+      ],
+      "temp": [
+        20,
+        27
+      ],
+      "humidity": [
+        80,
+        85
+      ],
+      "ph": [
+        5.0,
+        7.0
+      ],
+      "rainfall": [
+        180,
+        300
+      ],
+      "base_yield": 4.8
+    },
+    "maize": {
+      "N": [
+        60,
+        100
+      ],
+      "P": [
+        35,
+        60
+      ],
+      "K": [
+        15,
+        25
+      ],
+      "temp": [
+        18,
+        27
+      ],
+      "humidity": [
+        55,
+        75
+      ],
+      "ph": [
+        5.5,
+        7.0
+      ],
+      "rainfall": [
+        60,
+        110
+      ],
+      "base_yield": 5.2
+    },
+    "chickpea": {
+      "N": [
+        20,
+        60
+      ],
+      "P": [
+        55,
+        80
+      ],
+      "K": [
+        75,
+        85
+      ],
+      "temp": [
+        17,
+        22
+      ],
+      "humidity": [
+        14,
+        20
+      ],
+      "ph": [
+        5.5,
+        8.8
+      ],
+      "rainfall": [
+        65,
+        95
+      ],
+      "base_yield": 1.8
+    },
+    "kidneybeans": {
+      "N": [
+        10,
+        40
+      ],
+      "P": [
+        55,
+        80
+      ],
+      "K": [
+        15,
+        25
+      ],
+      "temp": [
+        15,
+        24
+      ],
+      "humidity": [
+        18,
+        25
+      ],
+      "ph": [
+        5.5,
+        6.2
+      ],
+      "rainfall": [
+        60,
+        150
+      ],
+      "base_yield": 1.6
+    },
+    "pigeonpeas": {
+      "N": [
+        10,
+        40
+      ],
+      "P": [
+        55,
+        80
+      ],
+      "K": [
+        15,
+        25
+      ],
+      "temp": [
+        18,
+        38
+      ],
+      "humidity": [
+        30,
+        70
+      ],
+      "ph": [
+        4.5,
+        7.5
+      ],
+      "rainfall": [
+        90,
+        200
+      ],
+      "base_yield": 1.5
+    },
+    "mothbeans": {
+      "N": [
+        10,
+        40
+      ],
+      "P": [
+        35,
+        60
+      ],
+      "K": [
+        15,
+        25
+      ],
+      "temp": [
+        24,
+        32
+      ],
+      "humidity": [
+        40,
+        70
+      ],
+      "ph": [
+        3.5,
+        8.5
+      ],
+      "rainfall": [
+        30,
+        75
+      ],
+      "base_yield": 1.2
+    },
+    "mungbean": {
+      "N": [
+        10,
+        40
+      ],
+      "P": [
+        35,
+        60
+      ],
+      "K": [
+        15,
+        25
+      ],
+      "temp": [
+        27,
+        30
+      ],
+      "humidity": [
+        80,
+        90
+      ],
+      "ph": [
+        6.2,
+        7.2
+      ],
+      "rainfall": [
+        35,
+        60
+      ],
+      "base_yield": 1.4
+    },
+    "blackgram": {
+      "N": [
+        30,
+        60
+      ],
+      "P": [
+        55,
+        80
+      ],
+      "K": [
+        15,
+        25
+      ],
+      "temp": [
+        25,
+        35
+      ],
+      "humidity": [
+        60,
+        70
+      ],
+      "ph": [
+        6.5,
+        7.8
+      ],
+      "rainfall": [
+        60,
+        75
+      ],
+      "base_yield": 1.3
+    },
+    "lentil": {
+      "N": [
+        10,
+        40
+      ],
+      "P": [
+        55,
+        80
+      ],
+      "K": [
+        15,
+        25
+      ],
+      "temp": [
+        15,
+        30
+      ],
+      "humidity": [
+        60,
+        70
+      ],
+      "ph": [
+        5.5,
+        7.5
+      ],
+      "rainfall": [
+        35,
+        55
+      ],
+      "base_yield": 1.4
+    },
+    "pomegranate": {
+      "N": [
+        10,
+        40
+      ],
+      "P": [
+        10,
+        30
+      ],
+      "K": [
+        35,
+        45
+      ],
+      "temp": [
+        18,
+        25
+      ],
+      "humidity": [
+        85,
+        95
+      ],
+      "ph": [
+        5.5,
+        7.2
+      ],
+      "rainfall": [
+        100,
+        115
+      ],
+      "base_yield": 12.0
+    },
+    "banana": {
+      "N": [
+        80,
+        120
+      ],
+      "P": [
+        70,
+        95
+      ],
+      "K": [
+        45,
+        55
+      ],
+      "temp": [
+        25,
+        30
+      ],
+      "humidity": [
+        75,
+        85
+      ],
+      "ph": [
+        5.5,
+        6.5
+      ],
+      "rainfall": [
+        90,
+        120
+      ],
+      "base_yield": 32.5
+    },
+    "mango": {
+      "N": [
+        10,
+        40
+      ],
+      "P": [
+        15,
+        40
+      ],
+      "K": [
+        25,
+        35
+      ],
+      "temp": [
+        27,
+        36
+      ],
+      "humidity": [
+        45,
+        55
+      ],
+      "ph": [
+        4.5,
+        7.0
+      ],
+      "rainfall": [
+        85,
+        105
+      ],
+      "base_yield": 10.5
+    },
+    "grapes": {
+      "N": [
+        10,
+        40
+      ],
+      "P": [
+        120,
+        145
+      ],
+      "K": [
+        195,
+        205
+      ],
+      "temp": [
+        8,
+        42
+      ],
+      "humidity": [
+        80,
+        85
+      ],
+      "ph": [
+        5.5,
+        6.5
+      ],
+      "rainfall": [
+        65,
+        75
+      ],
+      "base_yield": 22.0
+    },
+    "watermelon": {
+      "N": [
+        80,
+        120
+      ],
+      "P": [
+        5,
+        30
+      ],
+      "K": [
+        45,
+        55
+      ],
+      "temp": [
+        24,
+        27
+      ],
+      "humidity": [
+        80,
+        90
+      ],
+      "ph": [
+        6.0,
+        7.0
+      ],
+      "rainfall": [
+        40,
+        60
+      ],
+      "base_yield": 28.0
+    },
+    "muskmelon": {
+      "N": [
+        80,
+        120
+      ],
+      "P": [
+        5,
+        30
+      ],
+      "K": [
+        45,
+        55
+      ],
+      "temp": [
+        27,
+        30
+      ],
+      "humidity": [
+        90,
+        95
+      ],
+      "ph": [
+        6.0,
+        6.8
+      ],
+      "rainfall": [
+        20,
+        30
+      ],
+      "base_yield": 24.0
+    },
+    "apple": {
+      "N": [
+        10,
+        40
+      ],
+      "P": [
+        120,
+        145
+      ],
+      "K": [
+        195,
+        205
+      ],
+      "temp": [
+        21,
+        24
+      ],
+      "humidity": [
+        90,
+        95
+      ],
+      "ph": [
+        5.5,
+        6.5
+      ],
+      "rainfall": [
+        100,
+        125
+      ],
+      "base_yield": 16.0
+    },
+    "orange": {
+      "N": [
+        10,
+        40
+      ],
+      "P": [
+        5,
+        30
+      ],
+      "K": [
+        5,
+        15
+      ],
+      "temp": [
+        10,
+        35
+      ],
+      "humidity": [
+        90,
+        95
+      ],
+      "ph": [
+        6.0,
+        8.0
+      ],
+      "rainfall": [
+        100,
+        120
+      ],
+      "base_yield": 15.0
+    },
+    "papaya": {
+      "N": [
+        30,
+        70
+      ],
+      "P": [
+        45,
+        70
+      ],
+      "K": [
+        45,
+        55
+      ],
+      "temp": [
+        23,
+        44
+      ],
+      "humidity": [
+        90,
+        95
+      ],
+      "ph": [
+        6.5,
+        7.0
+      ],
+      "rainfall": [
+        140,
+        250
+      ],
+      "base_yield": 38.0
+    },
+    "coconut": {
+      "N": [
+        10,
+        40
+      ],
+      "P": [
+        5,
+        30
+      ],
+      "K": [
+        25,
+        35
+      ],
+      "temp": [
+        25,
+        29
+      ],
+      "humidity": [
+        90,
+        100
+      ],
+      "ph": [
+        5.5,
+        6.5
+      ],
+      "rainfall": [
+        130,
+        230
+      ],
+      "base_yield": 11.0
+    },
+    "cotton": {
+      "N": [
+        100,
+        140
+      ],
+      "P": [
+        35,
+        60
+      ],
+      "K": [
+        15,
+        25
+      ],
+      "temp": [
+        22,
+        26
+      ],
+      "humidity": [
+        75,
+        85
+      ],
+      "ph": [
+        6.0,
+        8.0
+      ],
+      "rainfall": [
+        60,
+        100
+      ],
+      "base_yield": 2.4
+    },
+    "jute": {
+      "N": [
+        60,
+        100
+      ],
+      "P": [
+        35,
+        60
+      ],
+      "K": [
+        35,
+        45
+      ],
+      "temp": [
+        23,
+        26
+      ],
+      "humidity": [
+        70,
+        90
+      ],
+      "ph": [
+        6.0,
+        7.5
+      ],
+      "rainfall": [
+        150,
+        200
+      ],
+      "base_yield": 3.1
+    },
+    "coffee": {
+      "N": [
+        80,
+        120
+      ],
+      "P": [
+        15,
+        40
+      ],
+      "K": [
+        25,
+        35
+      ],
+      "temp": [
+        23,
+        28
+      ],
+      "humidity": [
+        50,
+        70
+      ],
+      "ph": [
+        6.0,
+        7.5
+      ],
+      "rainfall": [
+        115,
+        200
+      ],
+      "base_yield": 1.6
+    }
+  }
+}

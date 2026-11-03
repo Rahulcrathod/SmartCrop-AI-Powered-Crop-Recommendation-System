@@ -1,0 +1,12 @@
+{
+  "_comment": "Configure your SMS Gateway here. Supported: Fast2SMS (India), Twilio (International), SMTP Email.",
+  "fast2sms_api_key": "ZXlREpWrszrxASPzbtJxV9vTqR0tYGDAAN7iAOwDcHJZodZgFqZAFn84WNQ3",
+  "twilio_sid": "",
+  "twilio_token": "",
+  "twilio_phone": "",
+  "smtp_host": "",
+  "smtp_port": 587,
+  "smtp_user": "",
+  "smtp_pass": "",
+  "smtp_sender": "verify@smartcrop.ai"
+}
